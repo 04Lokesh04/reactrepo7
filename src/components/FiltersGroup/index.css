@@ -1,0 +1,93 @@
+.filters-group-container {
+  margin-top: 16px;
+  background-color: transparent;
+}
+
+@media screen and (min-width: 768px) {
+  .filters-group-container {
+    width: 30%;
+    max-width: 350px;
+    margin-top: 48px;
+    flex-shrink: 0;
+  }
+}
+
+/* Write your CSS here */
+
+.categorycard {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 15px;
+}
+
+.sort-by-icon {
+  font-size: 20px;
+  margin-right: 6px;
+}
+
+.categorybutton {
+  background-color: transparent;
+  height: 50px;
+  border: 0px;
+  color: #475569;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.ratingcard {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 15px;
+}
+
+.headingis {
+  color: #0f172a;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.rate {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5px;
+}
+
+.ratingimage {
+  height: 25px;
+  width: 75px;
+}
+
+.rated {
+  color: #475569;
+  font-size: 15px;
+}
+
+.clearbutton {
+  background-color: transparent;
+  color: #0967d2;
+  font-size: 13px;
+  border: 2px solid #0967d2;
+  border-radius: 5px;
+  height: 45px;
+  width: 85px;
+}
+.searchcard {
+  display: flex;
+  flex-direction: row;
+  background-color: #64748b;
+  height: 55px;
+  width: 35%;
+}
+
+.input {
+  background-color: #64748b;
+  color: #ffffff;
+  height: 55px;
+  width: 100%;
+  border: 0px;
+}
