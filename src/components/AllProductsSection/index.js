@@ -91,6 +91,9 @@ class AllProductsSection extends Component {
     const {activeOptionId, titleSearch, category, ratingIs} = this.state
     console.log(ratingIs)
     const apiUrl = `https://apis.ccbp.in/products?sort_by=${activeOptionId}&category=${category}&title_search=${titleSearch}&rating=${ratingIs}`
+
+    const {activeOptionId, titleSerach, category, ratingIs} = this.state
+    const apiUrl = `https://apis.ccbp.in/products?sort_by=${activeOptionId}&category=${category}&title_search=${titleSerach}&rating=${ratingIs}`
     const options = {
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -126,6 +129,14 @@ class AllProductsSection extends Component {
 
   changesearchitems = searchvalue => {
     this.setState({titleSearch: searchvalue}, this.getProducts)
+
+    const filtered = categoryOptions.filter(each =>
+      each.name.toLowerCase().includes(searchvalue.toLowerCase()),
+    )
+    this.setState(
+      {titleSearch: searchvalue, category: filtered.categoryId},
+      this.getProducts,
+    )
   }
 
   changeCategory = categoryId => {
@@ -143,6 +154,8 @@ class AllProductsSection extends Component {
         productsList: [],
         apiStatus: 'INITIAL',
         titleSearch: '',
+        titleSerach: '',
+
         category: '',
         ratingIs: '',
       },
@@ -238,6 +251,7 @@ class AllProductsSection extends Component {
           changeRating={this.changeRating}
           clearFilter={this.clearFilter}
           titleSearch={titleSearch}
+          details={titleSearch}
         />
         {isLoading ? this.renderLoader() : this.renderany()}
       </div>

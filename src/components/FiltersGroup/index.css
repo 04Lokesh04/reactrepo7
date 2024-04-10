@@ -53,6 +53,7 @@
 
 .rate {
   list-style-type: none;
+
   display: flex;
   flex-direction: row;
   margin-bottom: 5px;
@@ -93,6 +94,6 @@
   border: 0px;
 }
 
-.list{
+.list {
   list-style-type: none;
 }
